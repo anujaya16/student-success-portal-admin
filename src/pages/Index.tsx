@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <DashboardLayout>
       <div className="mb-6">
-        <h1 className="text-3xl font-bold">Dashboard</h1>
+        <h1 className="text-3xl font-bold">Overview</h1>
         <p className="text-muted-foreground">Welcome to your student performance prediction admin panel</p>
       </div>
 

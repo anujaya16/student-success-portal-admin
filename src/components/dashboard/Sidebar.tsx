@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 const sidebarItems = [
-  { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
+  { icon: LayoutDashboard, label: 'Overview', path: '/' },
   { icon: Users, label: 'Students', path: '/students' },
   { icon: BarChart, label: 'Analytics', path: '/analytics' },
   { icon: Calendar, label: 'Attendance', path: '/attendance' },
