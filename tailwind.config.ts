@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for student dashboard
+				dashboard: {
+					blue: '#2D7FF9',
+					teal: '#20C997',
+					orange: '#FF922B',
+					red: '#FA5252',
+					green: '#51CF66',
+					purple: '#7048E8',
+					'light-blue': '#EBF3FF',
+					'light-bg': '#F8FAFC'
 				}
 			},
 			borderRadius: {
