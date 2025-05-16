@@ -10,7 +10,8 @@ import {
   FileText,
   Calendar,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  GraduationCap
 } from 'lucide-react';
 
 const sidebarItems = [
@@ -40,7 +41,14 @@ const Sidebar = () => {
         "flex items-center h-16 px-4 border-b",
         collapsed ? "justify-center" : "justify-between"
       )}>
-        {!collapsed && <span className="text-xl font-semibold text-dashboard-blue">EduPredict</span>}
+        {!collapsed ? (
+          <div className="flex items-center space-x-2">
+            <GraduationCap size={24} className="text-dashboard-blue" />
+            <span className="text-xl font-semibold text-dashboard-blue">EduTrack</span>
+          </div>
+        ) : (
+          <GraduationCap size={24} className="text-dashboard-blue" />
+        )}
         <button
           onClick={toggleSidebar}
           className="p-2 rounded-full hover:bg-secondary flex items-center justify-center"
@@ -77,7 +85,7 @@ const Sidebar = () => {
       )}>
         {!collapsed && (
           <div className="text-sm text-muted-foreground">
-            EduPredict Admin v1.0
+            EduTrack Admin v1.0
           </div>
         )}
       </div>
