@@ -6,21 +6,20 @@ import {
   LayoutDashboard, 
   Users, 
   BarChart, 
-  Settings,
   FileText,
   Calendar,
   ChevronLeft,
   ChevronRight,
-  GraduationCap
+  GraduationCap,
+  BookOpen
 } from 'lucide-react';
 
 const sidebarItems = [
   { icon: LayoutDashboard, label: 'Overview', path: '/' },
   { icon: Users, label: 'Students', path: '/students' },
   { icon: BarChart, label: 'Analytics', path: '/analytics' },
-  { icon: Calendar, label: 'Attendance', path: '/attendance' },
+  { icon: BookOpen, label: 'Courses', path: '/courses' },
   { icon: FileText, label: 'Reports', path: '/reports' },
-  { icon: Settings, label: 'Settings', path: '/settings' },
 ];
 
 const Sidebar = () => {
