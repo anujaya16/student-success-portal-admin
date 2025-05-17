@@ -33,28 +33,25 @@ const Sidebar = () => {
   return (
     <div 
       className={cn(
-        "min-h-screen backdrop-blur-md transition-all duration-300 z-10",
+        "min-h-screen glass z-20 transition-all duration-300",
         collapsed ? "w-20" : "w-64",
-        theme === 'light' 
-          ? "bg-white/80 border-r border-border/40" 
-          : "bg-slate-900/80 border-r border-slate-700/40"
       )}
     >
       <div className={cn(
-        "flex items-center h-16 px-4 border-b border-border/40 dark:border-slate-700/40",
+        "flex items-center h-16 px-4 border-b border-white/10 dark:border-slate-700/20",
         collapsed ? "justify-center" : "justify-between"
       )}>
         {!collapsed ? (
           <div className="flex items-center space-x-2">
-            <GraduationCap size={24} className="text-dashboard-blue dark:text-blue-300" />
-            <span className="text-xl font-semibold text-dashboard-blue dark:text-blue-300">EduTrack</span>
+            <GraduationCap size={24} className="text-dashboard-blue dark:text-blue-400" />
+            <span className="text-xl font-semibold bg-gradient-to-r from-dashboard-blue to-dashboard-purple dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">EduTrack</span>
           </div>
         ) : (
-          <GraduationCap size={24} className="text-dashboard-blue dark:text-blue-300" />
+          <GraduationCap size={24} className="text-dashboard-blue dark:text-blue-400" />
         )}
         <button
           onClick={toggleSidebar}
-          className="p-2 rounded-full hover:bg-secondary dark:hover:bg-slate-800 flex items-center justify-center"
+          className="p-2 rounded-full hover:bg-white/20 dark:hover:bg-slate-800/60 transition-colors flex items-center justify-center"
         >
           {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
         </button>
@@ -67,11 +64,11 @@ const Sidebar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) => cn(
-                  "flex items-center px-3 py-3 rounded-md transition-colors",
+                  "flex items-center px-3 py-3 rounded-xl transition-all duration-300 hover-scale",
                   collapsed ? "justify-center" : "space-x-3",
                   isActive 
-                    ? "bg-dashboard-light-blue dark:bg-blue-900/30 text-dashboard-blue dark:text-blue-300 font-medium backdrop-blur-sm" 
-                    : "hover:bg-secondary/70 dark:hover:bg-slate-800/70 text-gray-700 dark:text-gray-300 backdrop-blur-sm"
+                    ? "bg-white/20 dark:bg-slate-800/40 text-dashboard-blue dark:text-blue-400 font-medium shadow-lg backdrop-blur-sm border border-white/10 dark:border-slate-700/20" 
+                    : "hover:bg-white/10 dark:hover:bg-slate-800/20 text-gray-700 dark:text-gray-300"
                 )}
               >
                 <item.icon size={20} />
@@ -83,7 +80,7 @@ const Sidebar = () => {
       </nav>
       
       <div className={cn(
-        "p-4 border-t border-border/40 dark:border-slate-700/40 mt-auto",
+        "p-4 border-t border-white/10 dark:border-slate-700/20 mt-auto",
         collapsed ? "text-center" : ""
       )}>
         {!collapsed && (

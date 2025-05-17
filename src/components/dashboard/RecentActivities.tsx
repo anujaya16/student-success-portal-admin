@@ -45,11 +45,11 @@ const activities: Activity[] = [
 const ActivityIcon = ({ type }: { type: Activity['type'] }) => {
   switch (type) {
     case 'assessment':
-      return <Check className="h-5 w-5 text-green-500" />;
+      return <Check className="h-5 w-5 text-dashboard-green dark:text-green-400" />;
     case 'alert':
-      return <AlertTriangle className="h-5 w-5 text-amber-500" />;
+      return <AlertTriangle className="h-5 w-5 text-dashboard-orange dark:text-orange-400" />;
     case 'update':
-      return <Clock className="h-5 w-5 text-blue-500" />;
+      return <Clock className="h-5 w-5 text-dashboard-blue dark:text-blue-400" />;
     default:
       return null;
   }
@@ -57,19 +57,23 @@ const ActivityIcon = ({ type }: { type: Activity['type'] }) => {
 
 const RecentActivities = () => {
   return (
-    <Card>
+    <div className="h-full">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle>Recent Activities</CardTitle>
-        <button className="text-sm text-dashboard-blue flex items-center">
+        <button className="text-sm text-dashboard-blue dark:text-blue-400 flex items-center hover:underline">
           View all <ArrowRight className="h-3 w-3 ml-1" />
         </button>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className="space-y-5">
           {activities.map((activity) => (
-            <div key={activity.id} className="flex items-start">
+            <div key={activity.id} className="flex items-start hover:bg-white/10 dark:hover:bg-slate-800/20 p-2 rounded-lg transition-colors">
               <div className="mr-4 mt-1">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted">
+                <div className={`flex h-8 w-8 items-center justify-center rounded-full ${
+                  activity.type === 'assessment' ? 'bg-green-100 dark:bg-green-900/30' : 
+                  activity.type === 'alert' ? 'bg-amber-100 dark:bg-amber-900/30' : 
+                  'bg-blue-100 dark:bg-blue-900/30'
+                }`}>
                   <ActivityIcon type={activity.type} />
                 </div>
               </div>
@@ -82,7 +86,7 @@ const RecentActivities = () => {
           ))}
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 };
 

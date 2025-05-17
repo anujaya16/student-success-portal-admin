@@ -11,17 +11,19 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-background/80 backdrop-blur-md border-b border-border/40 p-4 flex justify-between items-center">
-      <div className="text-2xl font-bold text-dashboard-blue dark:text-blue-300">
+    <header className="glass sticky top-0 z-30 border-b border-white/20 dark:border-slate-700/20 p-4 flex justify-between items-center backdrop-blur-lg">
+      <div className="text-2xl font-bold text-gradient bg-gradient-to-r from-dashboard-blue to-dashboard-purple dark:from-blue-400 dark:to-purple-400">
         Student Performance Prediction
       </div>
       
       <div className="flex items-center space-x-4">
         <div className="relative hidden md:block">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <Search className="text-muted-foreground h-4 w-4" />
+          </div>
           <Input 
             placeholder="Search..." 
-            className="w-64 pl-10 bg-secondary/50 backdrop-blur-sm"
+            className="pl-10 bg-white/10 dark:bg-slate-800/40 backdrop-blur-sm border border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/60 transition-all duration-200 w-64"
           />
         </div>
         
@@ -32,7 +34,7 @@ const Header = () => {
                 variant="outline" 
                 size="icon" 
                 onClick={toggleTheme}
-                className="rounded-full bg-background/30 backdrop-blur-sm border-border/40 hover:bg-background/50"
+                className="rounded-full glass border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/60"
               >
                 {theme === 'light' ? (
                   <Moon className="h-5 w-5" />
@@ -48,15 +50,19 @@ const Header = () => {
           </Tooltip>
         </TooltipProvider>
         
-        <Button variant="ghost" size="icon" className="relative bg-background/30 backdrop-blur-sm rounded-full">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="relative glass rounded-full border-white/20 dark:border-slate-700/20 hover:bg-white/20 dark:hover:bg-slate-800/60"
+        >
           <Bell className="h-5 w-5" />
-          <span className="absolute top-1 right-1 w-2 h-2 bg-dashboard-red rounded-full"></span>
+          <span className="absolute top-1 right-1 w-2 h-2 bg-dashboard-red rounded-full animate-pulse-glow"></span>
         </Button>
         
         <div className="flex items-center space-x-2">
-          <Avatar className="h-8 w-8 border border-border/40">
+          <Avatar className="h-8 w-8 border border-white/30 dark:border-slate-700/30 hover-scale">
             <AvatarImage src="/placeholder.svg" alt="Admin" />
-            <AvatarFallback>AD</AvatarFallback>
+            <AvatarFallback className="bg-gradient-to-br from-dashboard-blue to-dashboard-purple text-white">AD</AvatarFallback>
           </Avatar>
           <span className="font-medium hidden md:block">Admin User</span>
         </div>

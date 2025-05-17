@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -91,13 +93,46 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-jakarta;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply backdrop-blur-md bg-white/20 dark:bg-black/20 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-md bg-white/20 dark:bg-black/20 border border-white/20 dark:border-white/10 shadow-lg;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-md bg-white/60 dark:bg-slate-800/60 border border-white/30 dark:border-slate-700/30 shadow-xl;
+  }
+  
+  .card-gradient-light {
+    @apply bg-gradient-to-br from-white to-slate-50/90;
+  }
+  
+  .card-gradient-dark {
+    @apply bg-gradient-to-br from-slate-800/80 to-slate-900/80;
+  }
+
+  .card-success {
+    @apply bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20;
+  }
+
+  .card-warning {
+    @apply bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20;
+  }
+
+  .card-info {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20;
+  }
+
+  .card-danger {
+    @apply bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[1.02];
   }
 }
+
