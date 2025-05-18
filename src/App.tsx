@@ -9,6 +9,7 @@ import Students from "./pages/Students";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
 import Courses from "./pages/Courses";
+import Schedules from "./pages/Schedules";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/students" element={<Students />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/schedules" element={<Schedules />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

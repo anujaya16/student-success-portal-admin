@@ -6,11 +6,11 @@ import {
   LayoutDashboard, 
   Users, 
   BarChart, 
-  FileText,
-  ChevronLeft,
-  ChevronRight,
   GraduationCap,
-  BookOpen
+  BookOpen,
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { useTheme } from '@/components/theme/ThemeProvider';
 
@@ -19,7 +19,7 @@ const sidebarItems = [
   { icon: Users, label: 'Students', path: '/students' },
   { icon: BarChart, label: 'Analytics', path: '/analytics' },
   { icon: BookOpen, label: 'Courses', path: '/courses' },
-  { icon: FileText, label: 'Reports', path: '/reports' },
+  { icon: CalendarDays, label: 'Schedules', path: '/schedules' },
 ];
 
 const Sidebar = () => {
