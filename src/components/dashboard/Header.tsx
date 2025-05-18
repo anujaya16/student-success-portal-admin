@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="glass sticky top-0 z-30 border-b border-white/20 dark:border-slate-700/20 p-4 flex justify-between items-center backdrop-blur-lg">
-      <div className="text-2xl font-bold text-gradient bg-gradient-to-r from-dashboard-blue to-dashboard-purple dark:from-blue-400 dark:to-purple-400">
+      <div className="text-2xl font-bold text-foreground dark:text-gray-300">
         Student Performance Prediction
       </div>
       
