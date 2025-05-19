@@ -8,7 +8,6 @@ import {
   BarChart, 
   GraduationCap,
   BookOpen,
-  CalendarDays,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -19,7 +18,7 @@ const sidebarItems = [
   { icon: Users, label: 'Students', path: '/students' },
   { icon: BarChart, label: 'Analytics', path: '/analytics' },
   { icon: BookOpen, label: 'Courses', path: '/courses' },
-  { icon: CalendarDays, label: 'Schedules', path: '/schedules' },
+  { icon: Users, label: 'Lecturers', path: '/lecturers' },
 ];
 
 const Sidebar = () => {

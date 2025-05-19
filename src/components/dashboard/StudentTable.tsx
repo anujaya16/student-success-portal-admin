@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 interface Student {
   id: string;
   name: string;
-  grade: string;
+  year: string;
   predictedPerformance: number;
   status: 'At Risk' | 'Warning' | 'Good' | 'Excellent';
   lastAssessment: string;
@@ -25,7 +25,7 @@ const students: Student[] = [
   {
     id: '1',
     name: 'Emma Johnson',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 92,
     status: 'Excellent',
     lastAssessment: '2 days ago',
@@ -33,7 +33,7 @@ const students: Student[] = [
   {
     id: '2',
     name: 'James Wilson',
-    grade: 'Grade 9',
+    year: 'Year 1',
     predictedPerformance: 78,
     status: 'Good',
     lastAssessment: '3 days ago',
@@ -41,7 +41,7 @@ const students: Student[] = [
   {
     id: '3',
     name: 'Sophia Brown',
-    grade: 'Grade 11',
+    year: 'Year 3',
     predictedPerformance: 65,
     status: 'Warning',
     lastAssessment: '1 week ago',
@@ -49,7 +49,7 @@ const students: Student[] = [
   {
     id: '4',
     name: 'Liam Garcia',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 45,
     status: 'At Risk',
     lastAssessment: '5 days ago',
@@ -57,7 +57,7 @@ const students: Student[] = [
   {
     id: '5',
     name: 'Olivia Martinez',
-    grade: 'Grade 9',
+    year: 'Year 1',
     predictedPerformance: 88,
     status: 'Good',
     lastAssessment: '1 day ago',
@@ -92,7 +92,7 @@ const StudentTable = () => {
             <TableHeader>
               <TableRow>
                 <TableHead>Student</TableHead>
-                <TableHead>Grade</TableHead>
+                <TableHead>Year</TableHead>
                 <TableHead className="text-right">Predicted Score</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead>Last Assessment</TableHead>
@@ -103,7 +103,7 @@ const StudentTable = () => {
               {students.map((student) => (
                 <TableRow key={student.id}>
                   <TableCell className="font-medium">{student.name}</TableCell>
-                  <TableCell>{student.grade}</TableCell>
+                  <TableCell>{student.year}</TableCell>
                   <TableCell className="text-right">{student.predictedPerformance}%</TableCell>
                   <TableCell>
                     <Badge className={getStatusColor(student.status)} variant="outline">
