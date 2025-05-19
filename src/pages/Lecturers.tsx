@@ -9,54 +9,52 @@ import { Users, Mail, Phone, Award, BookOpen } from 'lucide-react';
 const lecturers = [
   {
     id: 1,
-    name: 'Dr. Sarah Johnson',
+    name: 'Dr. Rasika Rajapaksha',
     department: 'Computer Science',
-    specialization: 'Artificial Intelligence',
-    email: 'sjohnson@university.edu',
+    specialization: 'Mathematics for Technology',
+    email: 'rasikar@kln.ac.lk',
     phone: '(555) 123-4567',
-    courses: ['Introduction to AI', 'Machine Learning'],
+    courses: ['Mathematics for Technology I',
+      'Mathematics for Technology II',
+      'Mathematics for Technology III',
+      'Mathematics for Computer Science II',
+      'Time Series Analysis for Data Science'],
     awards: 2
   },
   {
     id: 2,
-    name: 'Prof. Robert Chen',
-    department: 'Physics',
-    specialization: 'Quantum Mechanics',
-    email: 'rchen@university.edu',
+    name: 'Mr. L. Akash Tharuka',
+    department: 'Computer Science',
+    specialization: 'Computer networking',
+    email: 'akasht@kln.ac.lk',
     phone: '(555) 234-5678',
-    courses: ['Advanced Physics', 'Quantum Theory'],
-    awards: 5
-  },
-  {
-    id: 3,
-    name: 'Dr. Emily Rodriguez',
-    department: 'Mathematics',
-    specialization: 'Applied Mathematics',
-    email: 'erodriguez@university.edu',
-    phone: '(555) 345-6789',
-    courses: ['Calculus III', 'Linear Algebra'],
-    awards: 3
-  },
-  {
-    id: 4,
-    name: 'Prof. James Wilson',
-    department: 'Business Administration',
-    specialization: 'Strategic Management',
-    email: 'jwilson@university.edu',
-    phone: '(555) 456-7890',
-    courses: ['Business Strategy', 'Organizational Behavior'],
+    courses: ['Networking I'],
     awards: 1
   },
   {
-    id: 5,
-    name: 'Dr. Michelle Lee',
-    department: 'English Literature',
-    specialization: 'Contemporary Poetry',
-    email: 'mlee@university.edu',
-    phone: '(555) 567-8901',
-    courses: ['Creative Writing', 'Modern Poetry'],
-    awards: 4
-  }
+    id: 3,
+    name: 'Prof. N. G. J. Dias',
+    department: 'Computer Science',
+    specialization: 'Applied Mathematics',
+    email: 'ngjdias@kln.ac.lk',
+    phone: '(555) 345-6789',
+courses: [
+  'Data Structures and Algorithms',
+  'Computer Graphics',
+  'Data Communication and Networks',
+  'Computer Architecture and Organization',
+  'Multimedia Systems Development',
+  'Cyber Security',
+  'Formal Methods and Software Verification',
+  'Deductive Reasoning and Logic Programming',
+  'Theory of Automata',
+  'Theory of Computability and Complexity',
+  'Wireless Communication',
+  'Visual Programming'
+],
+    awards: 3
+  },
+  
 ];
 
 const Lecturers = () => {
@@ -124,9 +122,7 @@ const Lecturers = () => {
                   
                   <div className="flex justify-end mt-6">
                     <Button variant="outline" size="sm" className="mr-2">View Profile</Button>
-                    <Button size="sm" className="bg-dashboard-blue hover:bg-dashboard-blue/80 text-white">
-                      Schedule Meeting
-                    </Button>
+                    
                   </div>
                 </div>
               </div>

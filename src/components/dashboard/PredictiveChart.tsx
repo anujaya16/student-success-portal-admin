@@ -17,19 +17,7 @@ const data = [
 const PredictiveChart = () => {
   return (
     <Card className="col-span-full xl:col-span-2">
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Performance Prediction Trend</CardTitle>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center">
-            <div className="w-3 h-3 rounded-full bg-dashboard-blue mr-2"></div>
-            <span className="text-sm text-muted-foreground">Actual</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 rounded-full bg-dashboard-teal mr-2"></div>
-            <span className="text-sm text-muted-foreground">Predicted</span>
-          </div>
-        </div>
-      </CardHeader>
+      
       <CardContent className="pt-4">
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">

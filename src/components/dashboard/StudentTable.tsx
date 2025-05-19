@@ -22,25 +22,10 @@ interface Student {
 }
 
 const students: Student[] = [
-  {
-    id: '1',
-    name: 'Emma Johnson',
-    year: 'Year 2',
-    predictedPerformance: 92,
-    status: 'Excellent',
-    lastAssessment: '2 days ago',
-  },
-  {
-    id: '2',
-    name: 'James Wilson',
-    year: 'Year 1',
-    predictedPerformance: 78,
-    status: 'Good',
-    lastAssessment: '3 days ago',
-  },
+  
   {
     id: '3',
-    name: 'Sophia Brown',
+    name: 'Renuja Sathnidu',
     year: 'Year 3',
     predictedPerformance: 65,
     status: 'Warning',
@@ -48,20 +33,13 @@ const students: Student[] = [
   },
   {
     id: '4',
-    name: 'Liam Garcia',
+    name: 'Anujaya Jayanath',
     year: 'Year 2',
     predictedPerformance: 45,
     status: 'At Risk',
     lastAssessment: '5 days ago',
   },
-  {
-    id: '5',
-    name: 'Olivia Martinez',
-    year: 'Year 1',
-    predictedPerformance: 88,
-    status: 'Good',
-    lastAssessment: '1 day ago',
-  },
+  
 ];
 
 const getStatusColor = (status: Student['status']) => {

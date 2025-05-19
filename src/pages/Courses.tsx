@@ -8,9 +8,9 @@ import { BookOpen, Users, Clock } from "lucide-react";
 const courseData = [
   {
     id: 1,
-    title: "Introduction to Computer Science",
-    description: "Fundamentals of programming and computer science concepts",
-    instructor: "Dr. Alan Turing",
+    title: "Mathematics for Technology I",
+    description: "Fundamentals of mathematics for computer science",
+    instructor: "Dr. Rasika Rajapaksha",
     students: 32,
     credits: 3,
     duration: "16 weeks",
@@ -21,35 +21,25 @@ const courseData = [
     id: 2,
     title: "Advanced Mathematics",
     description: "Calculus, linear algebra and differential equations",
-    instructor: "Prof. Katherine Johnson",
+    instructor: "Prof. N. G. J. Dias",
     students: 28,
     credits: 4,
     duration: "14 weeks",
-    category: "Mathematics",
+    category: "Computer Science",
     level: "Advanced"
   },
   {
     id: 3,
-    title: "Physics for Engineers",
-    description: "Applied physics concepts for engineering students",
-    instructor: "Dr. Richard Feynman",
+    title: "Networking I",
+    description: "Networking for computer science",
+    instructor: "Mr. L. Akash Tharuka",
     students: 25,
     credits: 4,
     duration: "15 weeks",
-    category: "Physics",
+    category: "Computer Science",
     level: "Intermediate"
   },
-  {
-    id: 4,
-    title: "Introduction to Psychology",
-    description: "Basic concepts in human behavior and mental processes",
-    instructor: "Dr. Jean Piaget",
-    students: 45,
-    credits: 3,
-    duration: "12 weeks",
-    category: "Psychology",
-    level: "Beginner"
-  }
+  
 ];
 
 const Courses = () => {

@@ -9,9 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "/admin-dashboard/",
   plugins: [
     react(),
-    mode === 'development' &&
+    //mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
   resolve: {

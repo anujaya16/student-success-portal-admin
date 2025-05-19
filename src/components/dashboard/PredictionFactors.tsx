@@ -1,5 +1,5 @@
 
-import React from 'react';
+/*import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -71,3 +71,4 @@ const PredictionFactors = () => {
 };
 
 export default PredictionFactors;
+*/
