@@ -16,7 +16,7 @@ import { useTheme } from '@/components/theme/ThemeProvider';
 const sidebarItems = [
   { icon: LayoutDashboard, label: 'Overview', path: '/' },
   { icon: Users, label: 'Students', path: '/students' },
-  { icon: BarChart, label: 'Analytics', path: '/analytics' },
+  { icon: BarChart, label: 'Analyticsdfs', path: '/analytics' },
   { icon: BookOpen, label: 'Courses', path: '/courses' },
   { icon: Users, label: 'Lecturers', path: '/lecturers' },
 ];
