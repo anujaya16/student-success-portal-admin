@@ -18,7 +18,7 @@ import { Search, Filter } from 'lucide-react';
 interface Student {
   id: string;
   name: string;
-  grade: string;
+  year: string;
   predictedPerformance: number;
   status: 'At Risk' | 'Warning' | 'Good' | 'Excellent';
   lastAssessment: string;
@@ -29,92 +29,92 @@ const students: Student[] = [
   {
     id: '1',
     name: 'Emma Johnson',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 92,
     status: 'Excellent',
     lastAssessment: '2 days ago',
-    email: 'emma.j@school.edu',
+    email: 'emma.j@university.edu',
   },
   {
     id: '2',
     name: 'James Wilson',
-    grade: 'Grade 9',
+    year: 'Year 1',
     predictedPerformance: 78,
     status: 'Good',
     lastAssessment: '3 days ago',
-    email: 'j.wilson@school.edu',
+    email: 'j.wilson@university.edu',
   },
   {
     id: '3',
     name: 'Sophia Brown',
-    grade: 'Grade 11',
+    year: 'Year 3',
     predictedPerformance: 65,
     status: 'Warning',
     lastAssessment: '1 week ago',
-    email: 'sophia.b@school.edu',
+    email: 'sophia.b@university.edu',
   },
   {
     id: '4',
     name: 'Liam Garcia',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 45,
     status: 'At Risk',
     lastAssessment: '5 days ago',
-    email: 'l.garcia@school.edu',
+    email: 'l.garcia@university.edu',
   },
   {
     id: '5',
     name: 'Olivia Martinez',
-    grade: 'Grade 9',
+    year: 'Year 1',
     predictedPerformance: 88,
     status: 'Good',
     lastAssessment: '1 day ago',
-    email: 'o.martinez@school.edu',
+    email: 'o.martinez@university.edu',
   },
   {
     id: '6',
     name: 'Noah Thompson',
-    grade: 'Grade 11',
+    year: 'Year 3',
     predictedPerformance: 72,
     status: 'Good',
     lastAssessment: '4 days ago',
-    email: 'noah.t@school.edu',
+    email: 'noah.t@university.edu',
   },
   {
     id: '7',
     name: 'Charlotte Davis',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 56,
     status: 'Warning',
     lastAssessment: '2 days ago',
-    email: 'c.davis@school.edu',
+    email: 'c.davis@university.edu',
   },
   {
     id: '8',
     name: 'Ethan Anderson',
-    grade: 'Grade 9',
+    year: 'Year 1',
     predictedPerformance: 94,
     status: 'Excellent',
     lastAssessment: '3 days ago',
-    email: 'e.anderson@school.edu',
+    email: 'e.anderson@university.edu',
   },
   {
     id: '9',
     name: 'Ava Rodriguez',
-    grade: 'Grade 11',
+    year: 'Year 3',
     predictedPerformance: 41,
     status: 'At Risk',
     lastAssessment: '1 week ago',
-    email: 'ava.r@school.edu',
+    email: 'ava.r@university.edu',
   },
   {
     id: '10',
     name: 'Lucas Thomas',
-    grade: 'Grade 10',
+    year: 'Year 2',
     predictedPerformance: 83,
     status: 'Good',
     lastAssessment: '2 days ago',
-    email: 'l.thomas@school.edu',
+    email: 'l.thomas@university.edu',
   }
 ];
 
@@ -166,7 +166,7 @@ const Students = () => {
               <TableHeader>
                 <TableRow>
                   <TableHead>Name</TableHead>
-                  <TableHead>Grade</TableHead>
+                  <TableHead>Year</TableHead>
                   <TableHead>Email</TableHead>
                   <TableHead className="text-center">Predicted Score</TableHead>
                   <TableHead>Status</TableHead>
@@ -178,7 +178,7 @@ const Students = () => {
                 {students.map((student) => (
                   <TableRow key={student.id}>
                     <TableCell className="font-medium">{student.name}</TableCell>
-                    <TableCell>{student.grade}</TableCell>
+                    <TableCell>{student.year}</TableCell>
                     <TableCell>{student.email}</TableCell>
                     <TableCell className="text-center">{student.predictedPerformance}%</TableCell>
                     <TableCell>

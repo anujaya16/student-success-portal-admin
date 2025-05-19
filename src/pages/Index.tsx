@@ -20,16 +20,16 @@ const Index = () => {
         <StatCard 
           title="Total Students" 
           value="1,245" 
-          description="Across all grades" 
+          description="Across all years" 
           icon={<Users className="h-5 w-5 text-dashboard-blue dark:text-blue-400" />}
           trend="up"
-          trendValue="4.5% from last month"
+          trendValue="4.5% from last semester"
           type="info"
         />
         <StatCard 
           title="Prediction Accuracy" 
           value="94.2%" 
-          description="Current term" 
+          description="Current semester" 
           icon={<BarChart className="h-5 w-5 text-dashboard-green dark:text-green-400" />}
           trend="up"
           trendValue="1.2% improvement"
@@ -41,7 +41,7 @@ const Index = () => {
           description="Requiring intervention" 
           icon={<AlertTriangle className="h-5 w-5 text-dashboard-orange dark:text-orange-400" />}
           trend="down"
-          trendValue="3.8% from last month"
+          trendValue="3.8% from last semester"
           type="warning"
         />
         <StatCard 
