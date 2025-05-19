@@ -4,7 +4,7 @@ import { LineChart, Line, BarChart, Bar, ResponsiveContainer, XAxis, YAxis, Cart
 import DashboardLayout from '@/components/dashboard/DashboardLayout';
 import StatCard from '@/components/dashboard/StatCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { BookOpen, GraduationCap, Users, Award } from 'lucide-react';
+import { FileText, Bell, Twitter, Store } from 'lucide-react';
 
 // Sample data for charts
 const weeklyData = [
@@ -121,68 +121,68 @@ const Analytics = () => {
         </Card>
       </div>
 
-      {/* Stats Row - Updated with education-focused metrics */}
+      {/* Stats Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <Card className="glass-card hover-scale bg-gradient-to-br from-orange-50/40 to-amber-50/40 dark:from-orange-900/20 dark:to-amber-900/20">
           <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
-            <CardTitle className="text-sm font-medium">Average GPA</CardTitle>
+            <CardTitle className="text-sm font-medium">Storage Usage</CardTitle>
             <div className="w-10 h-10 rounded-md bg-dashboard-orange/20 flex items-center justify-center">
-              <Award className="h-5 w-5 text-dashboard-orange dark:text-orange-400" />
+              <FileText className="h-5 w-5 text-dashboard-orange dark:text-orange-400" />
             </div>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-3xl font-bold">3.7/4.0</div>
-            <p className="text-xs text-muted-foreground">Current Semester</p>
-            <div className="mt-4 text-sm text-green-600 dark:text-green-400 flex items-center">
-              <span>↑ 0.2 improvement from last semester</span>
+            <div className="text-3xl font-bold">46/50</div>
+            <p className="text-xs text-muted-foreground">GB Used Space</p>
+            <div className="mt-4 text-sm text-amber-600 dark:text-amber-400 flex items-center">
+              <span>⚠️ Running low on space...</span>
             </div>
           </CardContent>
         </Card>
 
         <Card className="glass-card hover-scale bg-gradient-to-br from-green-50/40 to-emerald-50/40 dark:from-green-900/20 dark:to-emerald-900/20">
           <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
-            <CardTitle className="text-sm font-medium">Course Completion</CardTitle>
+            <CardTitle className="text-sm font-medium">Revenue</CardTitle>
             <div className="w-10 h-10 rounded-md bg-dashboard-green/20 flex items-center justify-center">
-              <BookOpen className="h-5 w-5 text-dashboard-green dark:text-green-400" />
+              <Store className="h-5 w-5 text-dashboard-green dark:text-green-400" />
             </div>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-3xl font-bold">92%</div>
-            <p className="text-xs text-muted-foreground">Student Course Completion Rate</p>
+            <div className="text-3xl font-bold">$34,245</div>
+            <p className="text-xs text-muted-foreground">Total Annual Revenue</p>
             <div className="mt-4 text-xs text-muted-foreground flex items-center">
-              <span>📅 Current Academic Year</span>
+              <span>📅 Last 12 Months</span>
             </div>
           </CardContent>
         </Card>
 
         <Card className="glass-card hover-scale bg-gradient-to-br from-red-50/40 to-rose-50/40 dark:from-red-900/20 dark:to-rose-900/20">
           <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
-            <CardTitle className="text-sm font-medium">At-Risk Students</CardTitle>
+            <CardTitle className="text-sm font-medium">Open Issues</CardTitle>
             <div className="w-10 h-10 rounded-md bg-dashboard-red/20 flex items-center justify-center">
-              <Users className="h-5 w-5 text-dashboard-red dark:text-red-400" />
+              <Bell className="h-5 w-5 text-dashboard-red dark:text-red-400" />
             </div>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-3xl font-bold">24</div>
-            <p className="text-xs text-muted-foreground">Students needing intervention</p>
+            <div className="text-3xl font-bold">75</div>
+            <p className="text-xs text-muted-foreground">Issues need attention</p>
             <div className="mt-4 text-xs text-muted-foreground flex items-center">
-              <span>⚠️ 8% of total student body</span>
+              <span>🔄 Tracked from system</span>
             </div>
           </CardContent>
         </Card>
 
         <Card className="glass-card hover-scale bg-gradient-to-br from-blue-50/40 to-cyan-50/40 dark:from-blue-900/20 dark:to-cyan-900/20">
           <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
-            <CardTitle className="text-sm font-medium">Graduation Rate</CardTitle>
+            <CardTitle className="text-sm font-medium">New Followers</CardTitle>
             <div className="w-10 h-10 rounded-md bg-dashboard-blue/20 flex items-center justify-center">
-              <GraduationCap className="h-5 w-5 text-dashboard-blue dark:text-blue-400" />
+              <Twitter className="h-5 w-5 text-dashboard-blue dark:text-blue-400" />
             </div>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-3xl font-bold">94.2%</div>
-            <p className="text-xs text-muted-foreground">Expected graduation rate</p>
+            <div className="text-3xl font-bold">+245</div>
+            <p className="text-xs text-muted-foreground">New followers this month</p>
             <div className="mt-4 text-xs text-muted-foreground flex items-center">
-              <span>↑ 2.5% increase from last year</span>
+              <span>🔄 Just Updated</span>
             </div>
           </CardContent>
         </Card>
@@ -210,19 +210,19 @@ const Analytics = () => {
                 <tr className="border-b">
                   <td className="py-2">1</td>
                   <td className="py-2">John Smith</td>
-                  <td className="py-2">Computer Science</td>
+                  <td className="py-2">$35,738</td>
                   <td className="py-2">California</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2">2</td>
                   <td className="py-2">Emma Johnson</td>
-                  <td className="py-2">Mathematics</td>
+                  <td className="py-2">$42,150</td>
                   <td className="py-2">New York</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2">3</td>
                   <td className="py-2">Michael Chen</td>
-                  <td className="py-2">Physics</td>
+                  <td className="py-2">$37,500</td>
                   <td className="py-2">Massachusetts</td>
                 </tr>
               </tbody>
@@ -238,16 +238,16 @@ const Analytics = () => {
           <CardContent className="flex flex-col gap-4">
             <div className="flex flex-wrap gap-3">
               <div className="px-4 py-2 bg-dashboard-red/20 text-dashboard-red rounded-md flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span>STUDENTS</span>
+                <Bell className="h-4 w-4" />
+                <span>ALERTS</span>
               </div>
               <div className="px-4 py-2 bg-dashboard-blue/20 text-dashboard-blue rounded-md flex items-center gap-2">
-                <GraduationCap className="h-4 w-4" />
-                <span>CURRICULUM</span>
+                <FileText className="h-4 w-4" />
+                <span>REPORTS</span>
               </div>
               <div className="px-4 py-2 bg-dashboard-green/20 text-dashboard-green rounded-md flex items-center gap-2">
-                <BookOpen className="h-4 w-4" />
-                <span>COURSES</span>
+                <Store className="h-4 w-4" />
+                <span>SERVER</span>
               </div>
             </div>
             
