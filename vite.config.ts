@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/admin-dashboard/",
+   base: mode === 'production' ? '/student-success-portal-admin/' : '/',
+  
   plugins: [
     react(),
     //mode === 'development' &&
