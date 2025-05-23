@@ -11,6 +11,7 @@ import Analytics from "./pages/Analytics";
 import Courses from "./pages/Courses";
 import Lecturers from "./pages/Lecturers";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
+import StudentDetails from "./pages/StudentDetails";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/lecturers" element={<Lecturers />} />
+            <Route path="students/:id" element={<StudentDetails />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

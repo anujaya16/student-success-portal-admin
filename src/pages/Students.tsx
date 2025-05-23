@@ -14,23 +14,25 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Search, Filter } from 'lucide-react';
+import { NavLink } from "react-router-dom";
 
 interface Student {
   id: string;
   name: string;
   year: string;
-  predictedPerformance: number;
+  
   status: 'At Risk' | 'Warning' | 'Good' | 'Excellent';
   lastAssessment: string;
   email: string;
+  predictedPerformance: number;
 }
 
-const students: Student[] = [
+export const students: Student[] = [
   {
     id: '1',
     name: 'Akila Fernando',
     year: 'Year 2',
-    predictedPerformance: 92,
+    predictedPerformance: 97,
     status: 'Excellent',
     lastAssessment: '2 days ago',
     email: 'akila.F@university.edu',
@@ -39,7 +41,7 @@ const students: Student[] = [
     id: '2',
     name: 'Hiruna Mendis',
     year: 'Year 2',
-    predictedPerformance: 78,
+    predictedPerformance: 88,
     status: 'Good',
     lastAssessment: '3 days ago',
     email: 'hiruna.M@university.edu',
@@ -66,7 +68,7 @@ const students: Student[] = [
     id: '5',
     name: 'Awanki Thathsarani',
     year: 'Year 1',
-    predictedPerformance: 88,
+    predictedPerformance: 85,
     status: 'Good',
     lastAssessment: '1 day ago',
     email: 'awanki.T@university.edu',
@@ -75,7 +77,7 @@ const students: Student[] = [
     id: '6',
     name: 'Tharushi Dilshara',
     year: 'Year 3',
-    predictedPerformance: 72,
+    predictedPerformance: 90,
     status: 'Good',
     lastAssessment: '4 days ago',
     email: 'tharushi.D@university.edu',
@@ -133,7 +135,7 @@ const Students = () => {
                   <TableHead>Name</TableHead>
                   <TableHead>Year</TableHead>
                   <TableHead>Email</TableHead>
-                  <TableHead className="text-center">Predicted Score</TableHead>
+                  
                   <TableHead>Status</TableHead>
                   <TableHead>Last Assessment</TableHead>
                   <TableHead className="text-right">Actions</TableHead>
@@ -145,19 +147,20 @@ const Students = () => {
                     <TableCell className="font-medium">{student.name}</TableCell>
                     <TableCell>{student.year}</TableCell>
                     <TableCell>{student.email}</TableCell>
-                    <TableCell className="text-center">{student.predictedPerformance}%</TableCell>
+                    
                     <TableCell>
-                      <Badge className={getStatusColor(student.status)} variant="outline">
+                      <Badge className={`${getStatusColor(student.status)} min-w-[90px] flex items-center justify-center`} variant="outline">
                         {student.status}
                       </Badge>
                     </TableCell>
                     <TableCell>{student.lastAssessment}</TableCell>
                     <TableCell className="text-right">
-                      <div className="flex justify-end gap-2">
-                        <Button variant="outline" size="sm">View</Button>
-                        <Button variant="outline" size="sm">Edit</Button>
-                      </div>
-                    </TableCell>
+  <div className="flex justify-end gap-2">
+    <Button asChild variant="outline" size="sm">
+      <NavLink to={`/students/${student.id}`}>View</NavLink>
+    </Button>
+  </div>
+</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -165,9 +168,7 @@ const Students = () => {
           </div>
           
           <div className="mt-6 flex justify-between items-center">
-            <div className="text-sm text-muted-foreground">
-              Showing 10 of 125 students
-            </div>
+            
             <div className="flex gap-2">
               <Button variant="outline" size="sm" disabled>Previous</Button>
               <Button variant="outline" size="sm">Next</Button>

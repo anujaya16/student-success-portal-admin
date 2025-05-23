@@ -42,7 +42,7 @@ const students: Student[] = [
   
 ];
 
-const getStatusColor = (status: Student['status']) => {
+export const getStatusColor = (status: Student['status']) => {
   switch (status) {
     case 'At Risk':
       return 'bg-red-100 text-red-800';
